@@ -9,7 +9,7 @@
 
 > TODO: Add gif or picture of video with bounding boxes
 
-![](assets/paths.png)
+![](assets/small_paths.png)
 
 ## Installation
 
