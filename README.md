@@ -8,25 +8,13 @@ Something about urbanization and usecase here.
 
 ## :hammer: Initial Setup
 
-> Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need a lower python version.
+Some initial configuration is required to run things. First we need to install all the python dependencies, and then download the network weights.
 
-First up we'll install the necessary python dependencies. After having cloned the repository and activated your favorite virtual environment, install the required packages using `pip` by running
+- After having activated your favorite virtual environment, install the required packages using `pip` by running `pip install -r requirements.txt`. You might wanted to consider installing `numpy`, `scipy` and `sklearn` libraries using `conda`, as they are compiled with CPU-specific optimizations which can [speed things up quite a bit](http://markus-beuckelmann.de/blog/boosting-numpy-blas.html).
 
-```bash
-pip install -r requirements.txt
-```
+- Next up is downloading the YOLO network weights. You can do this by either download them [here](https://github.com/pjreddie/darknet) or by running `wget https://pjreddie.com/media/files/yolov3.weights`. Once the download is compete, place the `yolov3.weights`  in the project root directory. 
 
-You might wanted to consider installing `numpy`, `scipy` and `sklearn` libraries using `conda`, as they are compiled with CPU-specific optimizations which can [speed things up quite a bit](http://markus-beuckelmann.de/blog/boosting-numpy-blas.html).
-
-Next up is downloading the YOLO network weights. You can do this by either download them [here](https://github.com/pjreddie/darknet) or by running
-
-```bash
-wget https://pjreddie.com/media/files/yolov3.weights
-```
-
-Once the download is compete, place the `yolov3.weights`  in the project root directory. 
-
-> You can find more on YOLO network training and fine-tuning [here](https://pjreddie.com/darknet/yolo/)
+> Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need an older python version.
 
 ## :arrow_forward: Usage
 
