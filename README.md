@@ -11,13 +11,11 @@
 
 ![](assets/small_paths.png)
 
-## Installation
-
-### 1. Python
+## Initial Setup
 
 > Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need a lower python version.
 
-After having cloned the repository, install the required packages using `pip` by running
+First up we'll install the necessary python dependencies. After having cloned the repository and activated your favorite virtual environment, install the required packages using `pip` by running
 
 ```bash
 pip install -r requirements.txt
@@ -25,15 +23,13 @@ pip install -r requirements.txt
 
 You might wanted to consider installing `numpy`, `scipy` and `sklearn` libraries using `conda`, as they are compiled with CPU-specific optimizations which can [speed things up quite a bit](http://markus-beuckelmann.de/blog/boosting-numpy-blas.html).
 
-### 2. YOLO pretrained network
-
-We'll start with getting the YOLO network weights. You can do this by either download them [here](https://github.com/pjreddie/darknet) or by running
+Next up is downloading the YOLO network weights. You can do this by either download them [here](https://github.com/pjreddie/darknet) or by running
 
 ```bash
 wget https://pjreddie.com/media/files/yolov3.weights
 ```
 
-Make sure the `yolov3.weights` are in the project root directory. 
+Once the download is compete, place the `yolov3.weights`  in the project root directory. 
 
 > You can find more on YOLO network training and fine-tuning [here](https://pjreddie.com/darknet/yolo/)
 

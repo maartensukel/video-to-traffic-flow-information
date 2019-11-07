@@ -39,7 +39,7 @@ def parse_args():
                              'webcam connected')
     parser.add_argument('--debug-trackers', action='store_true', default=False,
                         help="Show the kalman trackers instead of the YOLO bounding boxes. Useful for debugging "
-                             "and setting parameters, no output is saved.")
+                             "and setting parameters. No output is saved.")
     parser.add_argument('--cuda', action='store_true', default=False, help='flag for running on GPU')
     parser.add_argument('--no-show', action='store_true', default=False,
                         help='do not show the detected video in real time')
