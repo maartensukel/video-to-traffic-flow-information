@@ -1,17 +1,12 @@
-# video-to-directions-placeholder
+# [Catchy project name]: [Descriptive subtitle]
 
-## Overview
-
-- YOLO and darknet
-- Configured to look at specific labels
-- Credits to sort with modifications
-- Advice for reuse
+Something about urbanization and usecase here.
 
 > TODO: Add gif or picture of video with bounding boxes
 
 ![](assets/small_paths.png)
 
-## Initial Setup
+## :hammer: Initial Setup
 
 > Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need a lower python version.
 
@@ -33,7 +28,7 @@ Once the download is compete, place the `yolov3.weights`  in the project root di
 
 > You can find more on YOLO network training and fine-tuning [here](https://pjreddie.com/darknet/yolo/)
 
-## Usage
+## :arrow_forward: Usage
 
 The application runs in two steps
 
@@ -129,7 +124,7 @@ The final output should look something like this. The `--time-freq` parameter ca
 | 2019-11-04 16:49:00 | SE        | SE      | 27     | 2    |
 | 2019-11-04 16:50:00 | NE        | NE      | 2      | 1    |
 
-## Credits
+## :tada: Credits
 
 This project wouldn't be possible without all the hard work on these projects:
 
