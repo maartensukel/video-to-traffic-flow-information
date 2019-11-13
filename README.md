@@ -60,7 +60,7 @@ optional arguments:
   --max-age MAX_AGE     The number of frames a tracker is kept alive without
                         matching bounding boxes. Useful for tracker while an
                         object is temporarily blocked
-  -o, --outdir OUTDIR	output directory, DEFAULT: detection/
+  -o, --outdir OUTDIR	output directory, DEFAULT: output/
   -w, --webcam          flag for detecting from webcam. Specify webcam ID in
                         the input. usually 0 for a single webcam connected
   --debug-trackers      Show the kalman trackers instead of the YOLO bounding
@@ -89,7 +89,8 @@ Here we do a few post-processing steps to make the previous output more manageab
 usage: postprocess_output.py [-h] -i INPUT [-p] [-g GAP_THRESH]
                              [-a ANGLE_THRESH] [-m MOVE_THRESH] [-o OUTDIR]
 
-Postprocessing of csv output from video-detection script
+Postprocessing of csv output from video-
+script
 
 optional arguments:
   -h, --help            show this help message and exit
