@@ -96,21 +96,13 @@ def fix_broken_paths(df, gap_thresh, angle_thresh):
     return uid_mapping
 
 
-def vec2dir(vec):
+def vec2angle(vec):
     """
-    Small helper function to translate an (x,y) vector into a direction string in (NE, NW, SE, SW)
+    Small helper function to translate an (x,y) vector into an angle in radians
     :param vec: np.array()
     :return: string
     """
-    angle = atan2(vec[1], vec[0]) / np.pi
-    if 0 < angle < 0.5:
-        return "NE"
-    elif 0.5 < angle < 1:
-        return "NW"
-    elif 1 < angle < 1.5:
-        return "SW"
-    else:
-        return "SE"
+    return round(atan2(vec[1], vec[0]), 3)
 
 
 def get_statics(df, move_thresh):
@@ -167,8 +159,8 @@ def format_output(df, segments=5):
             "end_coord": path[-1].tolist(),
             "start_area": get_screen_area(*path[0]),
             "end_area": get_screen_area(*path[-1]),
-            "start_dir": vec2dir(start_vec),
-            "end_dir": vec2dir(end_vec)
+            "start_angle": vec2angle(start_vec),
+            "end_angle": vec2angle(end_vec)
         })
 
     return pd.DataFrame(lod)
