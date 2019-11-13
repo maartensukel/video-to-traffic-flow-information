@@ -132,7 +132,22 @@ def get_statics(df, move_thresh):
     return ret_ids
 
 
-def get_output_angles(df, segments=5):
+def get_screen_area(x, y):
+    """
+    Hard coded for now, this should rely on some external data format
+    :param x:
+    :param y:
+    :return:
+    """
+    if y > 247 and x < 326:
+        return 1
+    elif y < 247 and x < 382:
+        return 2
+    else:
+        return 3
+
+
+def format_output(df, segments=5):
     """
     Here we convert the raw_data_df from frame-by-frame data on the tracker bounding boxes to
     direction data per uid so that we can aggregate this into traffic numbers.
@@ -148,6 +163,10 @@ def get_output_angles(df, segments=5):
             "uid": row["uid"],
             "label": row["type"],
             "ts": row["start_time_video"],
+            "start_coord": path[0].tolist(),
+            "end_coord": path[-1].tolist(),
+            "start_area": get_screen_area(*path[0]),
+            "end_area": get_screen_area(*path[-1]),
             "start_dir": vec2dir(start_vec),
             "end_dir": vec2dir(end_vec)
         })
@@ -201,7 +220,7 @@ def main():
     if args.plot:
         draw_paths(results_df, [width, height])
 
-    output_df = get_output_angles(results_df, segments=5)
+    output_df = format_output(results_df, segments=5)
 
     # Formatting output to the correct format
     output_df = (output_df
