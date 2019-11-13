@@ -2,7 +2,8 @@
 
 This code allows turning video data into information about traffic flows using object detection and object tracking.
 
-Cities around the world are becoming more crowded, gathering information about traffic flows allows monitoring of crowdedness in areas. The goal of this project is to do this transparent and privacy-friendly.
+## :city_sunrise: What does this do?
+Cities around the world are becoming more crowded, with this repository it becomes possible to gather information about traffic flows in a transparent and privacy-friendly manner.
 
 * Privacy-friendly: The code turns the video data into anonymous information about movement in the area.
 
@@ -16,7 +17,7 @@ Examples of use cases are monitoring the number of boats in the canals and detec
 
 ![](assets/small_paths.png)
 
-## :hammer: Initial Setup
+## :hammer: How to setup?
 
 Some initial configuration is required to run things. First we need to install all the python dependencies, and then download the network weights.
 
@@ -28,7 +29,7 @@ Some initial configuration is required to run things. First we need to install a
 
 > Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need an older python version.
 
-## :arrow_forward: Usage
+## :arrow_forward: How to use?
 
 The application runs in two steps
 
@@ -127,7 +128,7 @@ The final output should look something like this. The `--time-freq` parameter ca
 
 > TODO: Add gif or picture of video of busy street scene with output picture
 
-## :tada: Credits
+## :tada: Who made this possible?
 
 This project wouldn't be possible without all the hard work on these projects:
 
