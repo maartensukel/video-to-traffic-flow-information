@@ -116,6 +116,7 @@ Similarly if we want to run this with the default parameters, all you need to is
 
 The final output should look something like this. The `--time-freq` parameter can be used to change the aggregation level, [check here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases) for what values can be used.
 
+> TODO: Add 8 directions in example, add drawing
 | ts                  | start_dir | end_dir | person | car  |
 | ------------------- | --------- | ------- | ------ | ---- |
 | 2019-11-04 16:49:00 | NE        | NE      | 2      | 0    |
