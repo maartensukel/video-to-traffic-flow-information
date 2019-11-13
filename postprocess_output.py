@@ -174,23 +174,6 @@ def format_output(df, segments=5):
     return pd.DataFrame(lod)
 
 
-def multiindex_pivot(df, columns=None, values=None):
-    """
-    Unfortunately the pivot() method in pandas contains a bug for multiindex dataframes. See this issue
-    (https://github.com/pandas-dev/pandas/issues/23955) for more details.
-    """
-    names = list(df.index.names)
-    df = df.reset_index()
-    list_index = df[names].values
-    tuples_index = [tuple(i) for i in list_index]  # hashable
-    df = df.assign(tuples_index=tuples_index)
-    df = df.pivot(index="tuples_index", columns=columns, values=values)
-    tuples_index = df.index  # reduced
-    index = pd.MultiIndex.from_tuples(tuples_index, names=names)
-    df.index = index
-    return df
-
-
 def main():
     """
     Where the magic happens
@@ -221,16 +204,6 @@ def main():
         draw_paths(results_df, [width, height])
 
     output_df = format_output(results_df, segments=5)
-
-    # Formatting output to the correct format
-    output_df = (output_df
-                 .assign(ts=lambda x: x["ts"].astype("datetime64").dt.round(args.time_freq))
-                 .groupby(["ts", "start_dir", "end_dir", "label"])
-                 .count()
-                 .reset_index()
-                 .set_index(["ts", "start_dir", "end_dir"]))
-
-    output_df = multiindex_pivot(output_df, columns="label", values="uid")
 
     # Exporting results to csv
     input_filename = osp.split(args.input)[-1]
