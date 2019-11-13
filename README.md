@@ -1,8 +1,18 @@
-# [Catchy project name]: [Descriptive subtitle]
+# Video to traffic flow information
 
-Something about urbanization and usecase here.
+This code allows turning video data into information about traffic flows using object detection and object tracking.
 
-> TODO: Add gif or picture of video with bounding boxes
+Cities around the world are becoming more crowded, gathering information about traffic flows allows monitoring of crowdedness in areas. The goal of this project is to do this transparent and privacy-friendly.
+
+* Privacy-friendly: The code turns the video data into anonymous information about movement in the area.
+
+* Transparent: Because the code and model are opensource the use of this technology is transparent.
+
+* Traffic flow insights: A low budget method of monitoring traffic in a specific area by using only a camera.
+
+Examples of use cases are monitoring the number of boats in the canals and detecting how many pedestrians/trucks/cars enter or leave a specific area.
+
+> TODO: Add gif or picture of video with bounding boxes of boat, next to an animation of the drawn paths
 
 ![](assets/small_paths.png)
 
@@ -113,6 +123,9 @@ The final output should look something like this. The `--time-freq` parameter ca
 | 2019-11-04 16:49:00 | NW        | NW      | 7      | 5    |
 | 2019-11-04 16:49:00 | SE        | SE      | 27     | 2    |
 | 2019-11-04 16:50:00 | NE        | NE      | 2      | 1    |
+
+
+> TODO: Add gif or picture of video of busy street scene with output picture
 
 ## :tada: Credits
 
