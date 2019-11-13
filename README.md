@@ -105,7 +105,7 @@ optional arguments:
                         time frequency used for aggregating the output,
                         seepandas.dt.round() for valid input values. DEFAULT
                         '5min'
-  -o, --outdir OUTDIR	output directory, DEFAULT: detection/
+  -o, --outdir OUTDIR	output directory, DEFAULT: output/
 ```
 
 Similarly if we want to run this with the default parameters, all you need to is run
