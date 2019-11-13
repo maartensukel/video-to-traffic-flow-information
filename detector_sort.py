@@ -33,7 +33,7 @@ def parse_args():
     parser.add_argument('--max-age', default=10, help='The number of frames a tracker is kept alive without matching '
                                                       'bounding boxes. Useful for tracker while an object is '
                                                       'temporarily blocked')
-    parser.add_argument('-o', '--outdir', default='output', help='output directory, DEFAULT: output/')
+    parser.add_argument('-o', '--outdir', default='detection', help='output directory, DEFAULT: detection/')
     parser.add_argument('-w', '--webcam', action='store_true', default=False,
                         help='flag for detecting from webcam. Specify webcam ID in the input. usually 0 for a single '
                              'webcam connected')
@@ -123,15 +123,13 @@ def detect_video(model, args):
     # We filter out non-relevant classes, and mapping some classes to others. An alternative to this would be
     # retraining the YOLOV3 model to this smaller set of classes
     relevant_classes = [
-        "person",
-        "car",
-        "bus",
-        "train",
-        "truck"
+        "boat"
     ]
     relevant_classes_indices = [classes.index(cls) for cls in relevant_classes]
+
+    # If you want to merge classes together
     class_mapping = {
-        classes.index("car"): [classes.index(cls) for cls in ["bus", "train", "truck"]]
+        classes.index("boat"): [classes.index(cls) for cls in []]
     }
 
     if not osp.isdir(args.outdir):
