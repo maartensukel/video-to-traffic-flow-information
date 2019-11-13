@@ -140,11 +140,11 @@ def get_screen_area(x, y):
     :return:
     """
     if y > 247 and x < 326:
-        return 1
+        return "Tramhalte"
     elif y < 247 and x < 382:
-        return 2
+        return "Dijksgrachtpark"
     else:
-        return 3
+        return "Oosterdokskade"
 
 
 def format_output(df, segments=5):
