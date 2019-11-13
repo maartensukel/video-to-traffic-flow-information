@@ -107,6 +107,7 @@ venv.bak/
 yolov3.weights
 output/*
 data/
+examples/
 
 # Pycharm folders
 .idea/*

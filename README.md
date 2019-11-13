@@ -1,12 +1,23 @@
-# [Catchy project name]: [Descriptive subtitle]
+# Video to traffic flow information
 
-Something about urbanization and usecase here.
+This repository allows turning video data into information about traffic flows using object detection and object tracking.
 
-> TODO: Add gif or picture of video with bounding boxes
+## :city_sunrise: What does this do?
+Cities around the world are becoming more crowded, with this repository it becomes possible to gather information about traffic flows in a transparent and privacy-friendly manner.
+
+* Privacy-friendly: The code turns the video data into anonymous information about movement in the area.
+
+* Transparent: Because the code and model are opensource the use of this technology is transparent.
+
+* Traffic flow insights: A low budget method of monitoring traffic in a specific area by using only a camera.
+
+Examples of use cases are monitoring the number of boats in the canals and detecting how many pedestrians/trucks/cars enter or leave a specific area.
+
+> TODO: Add gif or picture of video with bounding boxes of boat, next to an animation of the drawn paths
 
 ![](assets/small_paths.png)
 
-## :hammer: Initial Setup
+## :hammer: How to setup?
 
 Some initial configuration is required to run things. First we need to install all the python dependencies, and then download the network weights.
 
@@ -18,7 +29,7 @@ Some initial configuration is required to run things. First we need to install a
 
 > Since we use f-strings a fair amount, python 3.6 or greater is required. Feel free to replace them if you need an older python version.
 
-## :arrow_forward: Usage
+## :arrow_forward: How to use?
 
 The application runs in two steps
 
@@ -49,7 +60,7 @@ optional arguments:
   --max-age MAX_AGE     The number of frames a tracker is kept alive without
                         matching bounding boxes. Useful for tracker while an
                         object is temporarily blocked
-  -o, --outdir OUTDIR	output directory, DEFAULT: detection/
+  -o, --outdir OUTDIR	output directory, DEFAULT: output/
   -w, --webcam          flag for detecting from webcam. Specify webcam ID in
                         the input. usually 0 for a single webcam connected
   --debug-trackers      Show the kalman trackers instead of the YOLO bounding
@@ -78,7 +89,8 @@ Here we do a few post-processing steps to make the previous output more manageab
 usage: postprocess_output.py [-h] -i INPUT [-p] [-g GAP_THRESH]
                              [-a ANGLE_THRESH] [-m MOVE_THRESH] [-o OUTDIR]
 
-Postprocessing of csv output from video-detection script
+Postprocessing of csv output from video-
+script
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -94,7 +106,7 @@ optional arguments:
                         time frequency used for aggregating the output,
                         seepandas.dt.round() for valid input values. DEFAULT
                         '5min'
-  -o, --outdir OUTDIR	output directory, DEFAULT: detection/
+  -o, --outdir OUTDIR	output directory, DEFAULT: output/
 ```
 
 Similarly if we want to run this with the default parameters, all you need to is run
@@ -105,6 +117,8 @@ Similarly if we want to run this with the default parameters, all you need to is
 
 The final output should look something like this. The `--time-freq` parameter can be used to change the aggregation level, [check here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases) for what values can be used.
 
+> TODO: Add 8 directions in example, add drawing
+
 | ts                  | start_dir | end_dir | person | car  |
 | ------------------- | --------- | ------- | ------ | ---- |
 | 2019-11-04 16:49:00 | NE        | NE      | 2      | 0    |
@@ -114,7 +128,10 @@ The final output should look something like this. The `--time-freq` parameter ca
 | 2019-11-04 16:49:00 | SE        | SE      | 27     | 2    |
 | 2019-11-04 16:50:00 | NE        | NE      | 2      | 1    |
 
-## :tada: Credits
+
+> TODO: Add gif or picture of video of busy street scene with output picture
+
+## :tada: Who made this possible?
 
 This project wouldn't be possible without all the hard work on these projects:
 

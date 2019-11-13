@@ -123,15 +123,13 @@ def detect_video(model, args):
     # We filter out non-relevant classes, and mapping some classes to others. An alternative to this would be
     # retraining the YOLOV3 model to this smaller set of classes
     relevant_classes = [
-        "person",
-        "car",
-        "bus",
-        "train",
-        "truck"
+        "boat"
     ]
     relevant_classes_indices = [classes.index(cls) for cls in relevant_classes]
+
+    # If you want to merge classes together
     class_mapping = {
-        classes.index("car"): [classes.index(cls) for cls in ["bus", "train", "truck"]]
+        classes.index("boat"): [classes.index(cls) for cls in []]
     }
 
     if not osp.isdir(args.outdir):
