@@ -13,9 +13,9 @@ Cities around the world are becoming more crowded, with this repository it becom
 
 Examples of use cases are monitoring the number of boats in the canals and detecting how many pedestrians/trucks/cars enter or leave a specific area.
 
-> TODO: Add gif or picture of video with bounding boxes of boat, next to an animation of the drawn paths
 ![](assets/example_gif_canal.gif)
-![](assets/example_paths_canal.pngf)
+
+![](assets/example_paths_canal.png)
 
 ## :hammer: How to setup?
 
