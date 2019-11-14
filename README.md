@@ -14,8 +14,8 @@ Cities around the world are becoming more crowded, with this repository it becom
 Examples of use cases are monitoring the number of boats in the canals and detecting how many pedestrians/trucks/cars enter or leave a specific area.
 
 > TODO: Add gif or picture of video with bounding boxes of boat, next to an animation of the drawn paths
-
-![](assets/small_paths.png)
+![](assets/example_gif_canal.gif)
+![](assets/example_paths_canal.pngf)
 
 ## :hammer: How to setup?
 
@@ -132,7 +132,7 @@ The final output should look something like this. The `--time-freq` parameter ca
 |18 |person|20191113120001|[282, 68]  |[34, 122] |3.031      |2.034    |
 
 
-> TODO: Add gif or picture of video of busy street scene with output picture
+![](assets/small_paths.png)
 
 ## :tada: Who made this possible?
 
