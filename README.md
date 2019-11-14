@@ -13,9 +13,12 @@ Cities around the world are becoming more crowded, with this repository it becom
 
 Examples of use cases are monitoring the number of boats in the canals and detecting how many pedestrians/trucks/cars enter or leave a specific area.
 
-![](assets/example_gif_canal.gif)
+Object detection            |  Traffic flow
+:-------------------------:|:-------------------------:
+![](assets/example_gif_canal.gif)  |  ![](assets/example_paths_canal.png)
 
-![](assets/example_paths_canal.png)
+
+
 
 ## :hammer: How to setup?
 
