@@ -126,6 +126,8 @@ If everything runs correctly, the final output should look something like this:
 |17 |person|20191113120001|[356, 204] |[750, 271]|-3.07      |0.08     |
 |18 |person|20191113120001|[282, 68]  |[34, 122] |3.031      |2.034    |
 
+Note that `start_coord` and `end_coord` denote the pixel coordinates from the top-left of the picture. Also good to note that the `start_angle` and `end_angle` are in the range `[-pi, pi]`, where an angle of 0 would be the same as the vector `(x,y) = (1,0)`.
+
 ## :tada: Who made this possible?
 
 This project wouldn't be possible without all the hard work on these projects:
