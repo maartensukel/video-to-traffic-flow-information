@@ -38,7 +38,7 @@ def draw_paths(df, image_size):
         path = np.array(df.loc[df["uid"] == uid, ["x", "y"]])
         for i in range(len(path) - 1):
             color = colormap(i / len(path))
-            draw.line(path[i:i + 2].reshape(-1).tolist(), fill=tuple(int(255 * c) for c in color[:3]))
+            draw.line(path[i:i + 2].reshape(-1).tolist(), fill=tuple(int(255 * c) for c in color[:3]),width=10)
 
     im.show()
 

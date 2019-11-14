@@ -194,7 +194,7 @@ def detect_video(model, args):
                 cv2.imshow('frame', frame)
             out.write(frame)
             if read_frames % 30 == 0:
-                print(f'Number of frames processed: {read_frames/total_frames:0.2f}%')
+                print(f'Frames processed: {read_frames/total_frames*100:0.2f}%')
             if not args.no_show and cv2.waitKey(1) & 0xFF == ord('q'):
                 break
         else:
