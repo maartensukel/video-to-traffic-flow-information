@@ -112,7 +112,7 @@ Similarly if we want to run this with the default parameters, all you need to is
 ./postprocess.py -i path/to/raw_data.csv
 ```
 
-The final output should look something like this. The `--time-freq` parameter can be used to change the aggregation level, [check here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases) for what values can be used.
+If everything runs correctly, the final output should look something like this:
 
 |uid|label |ts            |start_coord|end_coord |start_angle|end_angle|
 |---|------|--------------|-----------|----------|-----------|---------|
