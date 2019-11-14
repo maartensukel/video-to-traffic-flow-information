@@ -105,10 +105,6 @@ optional arguments:
                         broken angle threshold, DEFAULT: 0.5
   -m, --move-thresh MOVE_THRESH
                         static object threshold, DEFAULT: 10
-  -t, --time-freq TIME_FREQ
-                        time frequency used for aggregating the output,
-                        seepandas.dt.round() for valid input values. DEFAULT
-                        '5min'
   -o, --outdir OUTDIR	output directory, DEFAULT: output/
 ```
 
@@ -119,8 +115,6 @@ Similarly if we want to run this with the default parameters, all you need to is
 ```
 
 The final output should look something like this. The `--time-freq` parameter can be used to change the aggregation level, [check here](https://pandas.pydata.org/pandas-docs/stable/user_guide/timeseries.html#timeseries-offset-aliases) for what values can be used.
-
-> TODO: Add 8 directions in example, add drawing
 
 |uid|label |ts            |start_coord|end_coord |start_angle|end_angle|
 |---|------|--------------|-----------|----------|-----------|---------|
@@ -133,9 +127,6 @@ The final output should look something like this. The `--time-freq` parameter ca
 |14 |person|20191113120001|[748, 336] |[704, 145]|-2.783     |2.875    |
 |17 |person|20191113120001|[356, 204] |[750, 271]|-3.07      |0.08     |
 |18 |person|20191113120001|[282, 68]  |[34, 122] |3.031      |2.034    |
-
-
-![](assets/small_paths.png)
 
 ## :tada: Who made this possible?
 
