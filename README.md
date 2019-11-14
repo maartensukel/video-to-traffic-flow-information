@@ -1,8 +1,9 @@
 # Video to traffic flow information
 
+## :city_sunrise: What does this do?
+
 This repository allows turning video data into information about traffic flows using object detection and object tracking.
 
-## :city_sunrise: What does this do?
 Cities around the world are becoming more crowded, with this repository it becomes possible to gather information about traffic flows in a transparent and privacy-friendly manner.
 
 * Privacy-friendly: The code turns the video data into anonymous information about movement in the area.
