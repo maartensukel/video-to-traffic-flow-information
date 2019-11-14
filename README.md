@@ -15,7 +15,7 @@ Examples of use cases are monitoring the number of boats in the canals and detec
 
 Object detection            |  Traffic flow
 :-------------------------:|:-------------------------:
-<img src="assets/example_gif_canal.gif" width="50%" height="300" /> | <img src="assets/example_paths_canal.png" width="50%" height="300" />
+<img src="assets/example_gif_canal.gif" width="100%" height="300" /> | <img src="assets/example_paths_canal.png" width="100%" height="300" />
 
 
 
