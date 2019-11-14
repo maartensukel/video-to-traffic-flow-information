@@ -120,8 +120,7 @@ def detect_video(model, args):
     colors = pkl.load(open("cfg/pallete", "rb"))
     classes = load_classes("cfg/coco.names")
 
-    # We filter out non-relevant classes, and mapping some classes to others. An alternative to this would be
-    # retraining the YOLOV3 model to this smaller set of classes
+    # TODO: Turn this into an external config file (relevant classes and mapping)
     relevant_classes = [
         "boat"
     ]

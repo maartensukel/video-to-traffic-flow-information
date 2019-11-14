@@ -131,12 +131,7 @@ def get_screen_area(x, y):
     :param y:
     :return:
     """
-    if y > 247 and x < 326:
-        return "Tramhalte"
-    elif y < 247 and x < 382:
-        return "Dijksgrachtpark"
-    else:
-        return "Oosterdokskade"
+    return NotImplemented
 
 
 def format_output(df, segments=5):
@@ -157,8 +152,6 @@ def format_output(df, segments=5):
             "ts": row["start_time_video"],
             "start_coord": path[0].tolist(),
             "end_coord": path[-1].tolist(),
-            "start_area": get_screen_area(*path[0]),
-            "end_area": get_screen_area(*path[-1]),
             "start_angle": vec2angle(start_vec),
             "end_angle": vec2angle(end_vec)
         })
@@ -200,7 +193,7 @@ def main():
     # Exporting results to csv
     input_filename = osp.split(args.input)[-1]
     output_file = osp.join(args.outdir, "results_" + input_filename)
-    output_df.to_csv(output_file)
+    output_df.to_csv(output_file, index=False)
     print(f"Output written to {output_file}")
 
 
