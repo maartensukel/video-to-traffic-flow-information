@@ -14,13 +14,10 @@ import os.path as osp
 def parse_args():
     parser = argparse.ArgumentParser(description='Postprocessing of csv output from video-detection script')
     parser.add_argument('-i', '--input', required=True, help='input csv')
-    parser.add_argument('-p', '--plot', action="store_true", help="enables plotting of paths")
+    parser.add_argument('-p', '--no-plot', action="store_true", help="disables plotting of paths")
     parser.add_argument('-g', '--gap-thresh', type=float, default=0, help='broken path threshold, DEFAULT: 20')
     parser.add_argument('-a', '--angle-thresh', type=float, default=0, help='broken angle threshold, DEFAULT: 0.5')
     parser.add_argument('-m', '--move-thresh', type=float, default=10, help='static object threshold, DEFAULT: 10')
-    parser.add_argument('-t', '--time-freq', default="5min", help="time frequency used for aggregating the output, see"
-                                                                  "pandas.dt.round() for valid input values. DEFAULT "
-                                                                  "'5min'")
     parser.add_argument('-o', '--outdir', default='output', help='output directory, DEFAULT: output/')
 
     args = parser.parse_args()
@@ -185,7 +182,7 @@ def main():
     static_ind = results_df["uid"].isin(get_statics(results_df, move_thresh=args.move_thresh))
     results_df = results_df[~static_ind]
 
-    if args.plot:
+    if not args.no_plot:
         draw_paths(results_df, [width, height])
 
     output_df = format_output(results_df, segments=5)

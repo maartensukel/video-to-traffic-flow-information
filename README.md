@@ -71,7 +71,6 @@ optional arguments:
                         output is saved.
   --cuda                flag for running on GPU
   --no-show             do not show the detected video in real time
-
 ```
 
 If you want to run using the default parameters, run
@@ -92,20 +91,19 @@ Here we do a few post-processing steps to make the previous output more manageab
 usage: postprocess_output.py [-h] -i INPUT [-p] [-g GAP_THRESH]
                              [-a ANGLE_THRESH] [-m MOVE_THRESH] [-o OUTDIR]
 
-Postprocessing of csv output from video-
-script
+Postprocessing of csv output from video-detection script
 
 optional arguments:
   -h, --help            show this help message and exit
-  -i, --input INPUT		input csv
-  -p, --plot            enables plotting of paths
+  -i, --input INPUT      input csv
+  -p, --no-plot         disables plotting of paths
   -g, --gap-thresh GAP_THRESH
                         broken path threshold, DEFAULT: 20
   -a, --angle-thresh ANGLE_THRESH
                         broken angle threshold, DEFAULT: 0.5
   -m, --move-thresh MOVE_THRESH
                         static object threshold, DEFAULT: 10
-  -o, --outdir OUTDIR	output directory, DEFAULT: output/
+  -o, --outdir OUTDIR    output directory, DEFAULT: output/
 ```
 
 Similarly if we want to run this with the default parameters, all you need to is run
