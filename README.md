@@ -6,7 +6,7 @@ This repository allows turning video data into information about traffic flows u
 
 Cities around the world are becoming more crowded, with this repository it becomes possible to gather information about traffic flows in a transparent and privacy-friendly manner.
 
-* Privacy-friendly: The code turns the video data into anonymous information about movement in the area.
+* Privacy-friendly: Turn video data into anonymous information about traffic in the area.
 
 * Transparent: Because the code and model are opensource the use of this technology is transparent.
 
